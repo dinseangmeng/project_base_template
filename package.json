@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "khqr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DOEURN DEN",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bakong-khqr": "^1.0.18",
+    "dotenv": "^16.5.0"
+  }
+}
