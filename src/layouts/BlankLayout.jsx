@@ -7,7 +7,7 @@ const { Content } = Layout;
 const BlankLayout = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Content style={{ padding: '24px' }}>
+      <Content >
         <Outlet />
       </Content>
     </Layout>

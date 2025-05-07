@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Setting from './pages/Setting';
 
+import Login from './pages/Auth/Login';
+import Register from './pages/Auth/Register';
+import Terms from './pages/Auth/Term';
 
 import './App.css';
 
@@ -22,8 +25,9 @@ function App() {
         </Route>
 
         <Route element={<BlankLayout />}>
-          <Route path="/login" element={<div>Login Page</div>} />
-          <Route path="/register" element={<div>Register Page</div>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/terms" element={<Terms />} />
         </Route>
 
         <Route path="/" element={<Navigate to="/home" replace />} />

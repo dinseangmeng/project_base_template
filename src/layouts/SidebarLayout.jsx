@@ -115,13 +115,16 @@ const SidebarLayout = () => {
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
+         
             padding: 24,
-            background: "#fff",
+            background: "#f5f5f5",
             width: "100%",
           }}
         >
-          <Outlet />
+          <div style={{ background: "#fff", padding: 24, borderRadius: 8,boxShadow: "0 1px 4px rgba(0, 0, 0, 0.1)" }}>
+            <Outlet />
+
+          </div>
         </Content>
       </Layout>
     </Layout>
