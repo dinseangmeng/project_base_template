@@ -1,0 +1,8 @@
+.header-profile:hover{
+    background-color: #e6f4ff;
+}
+.header-profile{
+    transition: 300ms;
+    border-radius: 4px;
+    padding: 0 6px;
+}

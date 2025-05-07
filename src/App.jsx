@@ -2,7 +2,13 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import SidebarLayout from './layouts/SidebarLayout';
 import BlankLayout from './layouts/BlankLayout';
+
+
 import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Setting from './pages/Setting';
+
+
 import './App.css';
 
 function App() {
@@ -11,8 +17,8 @@ function App() {
       <Routes>
         <Route element={<SidebarLayout />}>
           <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<div>Profile Page</div>} />
-          <Route path="/settings" element={<div>Settings Page</div>} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Setting />} />
         </Route>
 
         <Route element={<BlankLayout />}>

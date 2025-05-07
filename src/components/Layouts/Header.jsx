@@ -1,18 +1,48 @@
 import React from 'react';
-import { Layout, Avatar, Badge, Space, Typography } from 'antd';
+import { Layout, Avatar, Badge, Space, Typography,Dropdown } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import {
   BellOutlined,
   SearchOutlined,
   UserOutlined,
+  LogoutOutlined,
 } from '@ant-design/icons';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
 
+import './style/index.css';
+
+
 const Header = ({ children }) => {
+
   const navigate = useNavigate();
 
+
+  const items = [
+    {
+      key: '1',
+      label: (
+        <div style={{ display: 'flex', alignItems: 'center' }} onClick={() => navigate('/profile')}>
+         
+          <p>Profile</p>
+        </div>
+      ),
+      
+    },
+    {
+      key: '2',
+      style: {
+        color: '#1677ff',
+      },
+      label: (
+        <div style={{ display: 'flex', alignItems: 'center',gap: "10px" }} onClick={() => navigate('/login')}>
+           <LogoutOutlined />
+          <p>Login</p>
+        </div>
+      ),
+    },
+  ];
   return (
     <AntHeader style={{ 
       background: '#fff', 
@@ -33,10 +63,12 @@ const Header = ({ children }) => {
         <Badge count={5}>
           <BellOutlined style={{ fontSize: '18px', cursor: 'pointer' }} />
         </Badge>
-        <Space style={{ cursor: 'pointer' }} onClick={() => navigate('/profile')}>
-          <Avatar icon={<UserOutlined />} />
-          <span>John Doe</span>
-        </Space>
+        <Dropdown className="header-profile" menu={{ items }} trigger={['click']} >
+          <Space  style={{ cursor: 'pointer' }} >
+            <Avatar icon={<UserOutlined />} />
+            <span>John Doe</span>
+          </Space>
+        </Dropdown>
       </Space>
     </AntHeader>
   );
